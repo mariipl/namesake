@@ -230,13 +230,13 @@ test("Massachusetts Court Order", async ({ page }, testInfo) => {
   await test.step("Return original documents", async () => {
     await expect(
       page.getByRole("heading", {
-        name: "Do you want your original documents returned afterwards?",
+        name: "You will need to submit a certified copy of your birth certificate and certified copies of any prior name changes. Do you want these documents returned afterwards?",
       }),
     ).toBeVisible();
     await page.getByText("No, I don’t need my documents").click();
     await expect(
       page.getByText(
-        "We strongly recommend getting your original documents back",
+        "We strongly recommend getting your certified documents back from the court. You will need to present these documents alongside other name change forms in the future!",
       ),
     ).toBeVisible();
 

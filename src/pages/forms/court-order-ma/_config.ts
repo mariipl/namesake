@@ -53,6 +53,6 @@ export const courtOrderMaConfig: FormConfig = {
       text: "To pay for filing, bring a credit or debit card, a check made payable to the Commonwealth of Massachusetts, or exact cash.",
       when: (data) => data.shouldApplyForFeeWaiver !== true,
     },
-    "Remember to bring all supporting documents to the court.",
+    "Remember to bring a certified copy of your birth certificate and certified copies of any previous name changes.",
   ],
 };
