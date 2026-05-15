@@ -12,7 +12,6 @@ import { otherNamesStep } from "./_steps/OtherNamesStep";
 import { previousNameChangeStep } from "./_steps/PreviousNameChangeStep";
 import { pronounsStep } from "./_steps/PronounsStep";
 import { reasonStep } from "./_steps/ReasonStep";
-import { returnDocumentsStep } from "./_steps/ReturnDocumentsStep";
 
 export const courtOrderMaConfig: FormConfig = {
   slug: "court-order-ma",
@@ -28,7 +27,6 @@ export const courtOrderMaConfig: FormConfig = {
     otherNamesStep,
     interpreterStep,
     pronounsStep,
-    returnDocumentsStep,
     feeWaiverStep,
     mothersMaidenNameStep,
   ],

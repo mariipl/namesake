@@ -227,23 +227,6 @@ test("Massachusetts Court Order", async ({ page }, testInfo) => {
     await page.getByRole("button", { name: "Continue" }).click();
   });
 
-  await test.step("Return original documents", async () => {
-    await expect(
-      page.getByRole("heading", {
-        name: "You will need to submit a certified copy of your birth certificate and certified copies of any prior name changes. Do you want these documents returned afterwards?",
-      }),
-    ).toBeVisible();
-    await page.getByText("No, I don’t need my documents").click();
-    await expect(
-      page.getByText(
-        "We strongly recommend getting your certified documents back from the court. You will need to present these documents alongside other name change forms in the future!",
-      ),
-    ).toBeVisible();
-
-    await page.getByText("Yes, return my documents").click();
-    await page.getByRole("button", { name: "Continue" }).click();
-  });
-
   await test.step("Fee waiver", async () => {
     await expect(
       page.getByRole("heading", {
@@ -307,9 +290,6 @@ test("Massachusetts Court Order", async ({ page }, testInfo) => {
     ).toBeVisible();
 
     await expect(page.getByText("Other pronouns: zi/zir")).toBeVisible();
-    await expect(
-      page.getByText("Return original documents? Yes"),
-    ).toBeVisible();
   });
 
   await test.step("Finish, download, and complete", async () => {
